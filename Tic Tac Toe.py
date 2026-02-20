@@ -18,9 +18,29 @@ def printing_board(board):
       print(board[k][0] + " | " + board[k][1] + " | " + board[k][2])
       if k < 2:
         print("--+---+--")
+'''PART 3: Take Player Input
+Ask the player to enter row (0-2) and column (0-2).
+Convert input into integers.
+
+Expected Output:
+
+Enter row (0-2): 1
+Enter column (0-2): 2'''
+def get_user_input():
+    row = -1
+    while row < 0 or row > 2:
+        row = input("enter a row (0-2)")
+        row = int(row)
+    column = -1
+    while column < 0 or column > 2:
+        column = input("enter a column (0-2)")
+        column = int(column)
+    return row, column
+    
 
 def main():
     board = create_board()
     printing_board(board)
-    
+    row, column = get_user_input()
+
 main()
