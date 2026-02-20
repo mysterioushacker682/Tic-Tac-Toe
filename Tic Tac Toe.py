@@ -26,6 +26,9 @@ Expected Output:
 
 Enter row (0-2): 1
 Enter column (0-2): 2'''
+def get_user_name():
+    player1 = input("enter your name")
+    player2 = input("enter you name")
 def get_user_input():
     row = -1
     while row < 0 or row > 2:
@@ -36,11 +39,13 @@ def get_user_input():
         column = input("enter a column (0-2)")
         column = int(column)
     return row, column
+
     
 
 def main():
     board = create_board()
     printing_board(board)
+    get_user_name()
     row, column = get_user_input()
 
 main()
